@@ -31,6 +31,7 @@ matrix:
 
 script:
   - mvn package
+  - ls -lah
 
 deploy:
   # Create GitHub release on new version
@@ -41,7 +42,7 @@ deploy:
     name: $TRAVIS_TAG
     on:
       tags: true
-      jdk: 12
+      jdk: openjdk12
 
 notifications:
   slack:
