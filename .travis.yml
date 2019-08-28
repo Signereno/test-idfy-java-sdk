@@ -41,6 +41,7 @@ deploy:
     name: $TRAVIS_TAG
     on:
       tags: true
+      jdk: 12
 
 notifications:
   slack:
