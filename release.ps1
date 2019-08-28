@@ -45,7 +45,7 @@ $newVersion = "$currentMajor.$currentMinor.$currentPatch";
 Write-Host "New version: $newVersion"
 
 # Update .csproj
-$xml.Project.PropertyGroup.VersionPrefix = $newVersion
+$xml.project.version = $newVersion
 $xml.Save($csprojPath)
 
 Write-Host "Version updated in Project file. Enter the new version to confirm release."
