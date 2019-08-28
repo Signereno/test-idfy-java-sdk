@@ -36,6 +36,7 @@ script:
 
 deploy:
   # Create GitHub release on new version
+  - skip_cleanup: true
   - provider: releases
     file_glob: true
     file:
