@@ -37,8 +37,6 @@ deploy:
     file_glob: true
     file:
       - "target/*.jar"
-      - "/home/travis/build/Signereno/test-idfy-java-sdk/target/idfy-sdk-java-1.0.9.jar"
-      - "pom.xml"
     api_key: $GITHUB_OAUTH_TOKEN
     name: $TRAVIS_TAG
     on:
