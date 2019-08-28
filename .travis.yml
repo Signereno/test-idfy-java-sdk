@@ -18,14 +18,15 @@ before_install:
     unzip "idfy-mock-server/idfy-mock-server_${IDFY_MOCK_SERVER_VERSION}.zip" -d "idfy-mock-server/idfy-mock-server_${IDFY_MOCK_SERVER_VERSION}/"
     dotnet "idfy-mock-server/idfy-mock-server_${IDFY_MOCK_SERVER_VERSION}/Idfy.MockServer.dll" &
 
+jdk:
+  - openjdk8
+  - openjdk9
+  - openjdk10
+  - openjdk11
+  - openjdk12
+  - openjdk-ea
+
 matrix:
-  include:
-    - jdk: openjdk8
-    - jdk: openjdk9
-    - jdk: openjdk10
-    - jdk: openjdk11
-    - jdk: openjdk12
-    - jdk: openjdk-ea
   allow_failures:
     - jdk: openjdk-ea
 
@@ -37,7 +38,9 @@ deploy:
   # Create GitHub release on new version
   - provider: releases
     file_glob: true
-    file: "*.jar"
+    file:
+      - "*target/.jar"
+      - "/home/travis/build/Signereno/test-idfy-java-sdk/target/idfy-sdk-java-1.0.6.jar"
     api_key: $GITHUB_OAUTH_TOKEN
     name: $TRAVIS_TAG
     on:

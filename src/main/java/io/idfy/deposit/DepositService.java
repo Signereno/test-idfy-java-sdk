@@ -66,6 +66,10 @@ public class DepositService extends IdfyBaseService {
         return postAsync(url.build());
     }
 
+    public void testDeposits() {
+        String localVar = "test";
+    }
+
 
     /**
      * Create deposit
