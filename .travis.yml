@@ -19,10 +19,6 @@ before_install:
     dotnet "idfy-mock-server/idfy-mock-server_${IDFY_MOCK_SERVER_VERSION}/Idfy.MockServer.dll" &
 
 jdk:
-  - openjdk8
-  - openjdk9
-  - openjdk10
-  - openjdk11
   - openjdk12
   - openjdk-ea
 
