@@ -10,7 +10,7 @@ The SDK is available on Maven Central, and the JAR can also be downloaded direct
 
 /* Installing from Maven*/
 
-/* Downloading the JAR directly */
+/* Downloading the JAR directly from a release on Github */
 
 ## Documentation
 - [Idfy REST API Reference](https://developer.idfy.io/api)

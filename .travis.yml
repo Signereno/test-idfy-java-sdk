@@ -29,6 +29,9 @@ matrix:
   allow_failures:
     - jdk: openjdk-ea
 
+script:
+  - mvn package
+
 deploy:
   # Create GitHub release on new version
   - provider: releases
